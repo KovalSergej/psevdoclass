@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    font-size: 30px;
+    line-height: 1;
+    border: 2px solid #000;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #000;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: blue;
+}
+.btn::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #000;
+}
+.btn::first-letter {
+    text-transform: uppercase;
+    color: red;
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+p::first-line {
+    font-style: italic;
+    color: red;
+    font-size: 18px;
+}
+ul a {
+    color: inherit;
+}
+
+ul li:first-child a {
+    color: red;
+}
+ul li:nth-child(odd){
+    font-weight: bold;
+}
+ul li:nth-child(even){
+    font-size: 20px;
+}
+ul li:nth-child(n + 5) a {
+    text-decoration: none;
+}
+ul li:nth-child(-n + 5) a {
+    color: green;
+}
+ul li:not(:first-child) {
+    font-style: italic;
+}
